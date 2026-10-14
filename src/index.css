@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #FAF9F6;
+    --text-main: #272334;
+    --card-bg: #FFFFFF;
+    --border-color: #EAE6DF;
+    --lavender-primary: #A78BFA;
+    --lavender-soft: #EDE9FE;
+    --lavender-deep: #7C3AED;
+    --pink-accent: #FBCFE8;
+  }
+
+  .dark {
+    --bg-main: #181524;
+    --text-main: #F3F1F8;
+    --card-bg: #221E32;
+    --border-color: #342E4A;
+    --lavender-primary: #A78BFA;
+    --lavender-soft: #2F284B;
+    --lavender-deep: #C4B5FD;
+    --pink-accent: #831843;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* 3D Flip Card Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.45);
+}
